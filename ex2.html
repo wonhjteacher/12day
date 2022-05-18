@@ -7,19 +7,28 @@
     <title>Document</title>
     <link rel="stylesheet" href="css/all.min.css">
     <style>
-       
+       #test{
+           filter: blur(5px);
+       }
+       #test:hover{
+           filter:blur(0) brightness(150%) drop-shadow(3px 3px 5px rgba(0,0,0,.5));
+           transition: filter 0.35s;
+       }
+       #test2:hover{
+          /*  filter:grayscale(100%); */
+           filter:hue-rotate(90deg);
+       }
+
     </style>
 </head>
 <body>
     <div>
         <i class="fas fa-align-justify"></i>
     </div>
-    <img src="img/subimg02.png" alt="">
+    <img src="images/subimg02.png" alt="">
     <br>
-    <img src="img/subimg02.png" alt="" id="test">
+    <img src="images/subimg02.png" alt="" id="test">
     <br>
-    <img src="img/subimg03.png" alt="" id="test2">
-
-   
+    <img src="images/subimg03.png" alt="" id="test2">
 </body>
 </html>

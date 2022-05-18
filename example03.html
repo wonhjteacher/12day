@@ -1,28 +1,49 @@
 <!DOCTYPE html>
-<html>
+<html lang='ko'>
 <head>
 <meta charset="UTF-8">
-<title></title>
+<title>flex ex</title>
 <style>
+  *{box-sizing:border-box; margin:0; padding:0}
+  body{font-family:Arial, Helvetica, sans-serif;}
+  .header{text-align: center;padding:60px;background-color: rgb(111, 159, 159);color:#fff}
+  .navbar{
+   background-color: rgb(212, 177, 246);
+   display: flex;
+  }
+  .navbar a{
+    color:#fff;padding:14px 20px;text-decoration: none;text-align: center;
+  }
+  .navbar a:hover{background-color: cadetblue;color:#000}
+  .row {display: flex;flex-wrap:wrap}
+  .side{flex:100%;background-color: rgb(255, 218, 169);padding:20px}
+  .main{flex: 100%;background-color: rgb(244, 232, 255);padding: 20px;}
+  .fakeimg{background-color: #ccc;width: 100%;padding: 20px; height:60px;}
+  .footer{padding: 20px; text-align: center;background: #ddd;}
+
+  @media screen and (min-width:768px) {
+    .side {flex: 30%;}
+	  .main {flex: 70%;}
+  }
 
 </style>
 </head>
+<body>
 <!-- Header -->
-<div class="header">
+<header class="header">
   <h1>My Website</h1>
   <p>With a <b>flexible</b> layout.</p>
-</div>
+</header>
 <!-- Nav Bar -->
-<div class="navbar">
+<nav class="navbar">
   <a href="#">Link</a>
   <a href="#">Link</a>
   <a href="#">Link</a>
   <a href="#">Link</a>
-</div>
-
+</nav>
 	<!--(content) -->
-<div class="row">
-  <div class="side">
+<section class="row">
+  <section class="side">
       <h2>About Me</h2>
       <h5>Photo of me:</h5>
       <div class="fakeimg">Image</div>
@@ -32,8 +53,8 @@
       <div class="fakeimg">Image</div><br>
       <div class="fakeimg">Image</div><br>
       <div class="fakeimg">Image</div>
-  </div>
-  <div class="main">
+  </section>
+  <section class="main">
       <h2>TITLE HEADING</h2>
       <h5>Title description, Dec 7, 2022</h5>
       <div class="fakeimg" style="height:200px;">Image</div>
@@ -45,13 +66,13 @@
       <div class="fakeimg" style="height:200px;">Image</div>
       <p>Some text..</p>
       <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
-  </div>
-</div>
+  </section>
+</section>
 
 <!-- Footer -->
-<div class="footer">
+<footer class="footer">
   <h2>Footer</h2>
-</div>
+</footer>
 
 </body>
 </html>
